@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Idroid';
+    src: url(fontes/idroid.otf) format('opentype');
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+:root
+{
+    --cor_mais_leve:#ebe5c5;
+    --cor_muito_leve: #83e1ad;
+    --cor_leve: #3ddc84;
+    --cor_media: #2fa866;
+    --cor_forte:#1a5c37;
+    --cor_mais_forte:#063d1e;
+
+    --fonte_padrao: Arial, Verdana, sans-serif;
+    --fonte_destaque: 'Bebas Neue', cursive;
+    --fonte_android: 'Idroid', cursive;    
+}
+
+body
+{
+    /* background-color: #83E1AD;     */
+    background-color: var(--cor_muito_leve);    
+    padding: 0;
+    margin: 0;
+    /* Syntax: [ [ <'font-style'> || <font-variant-css21> || <'font-weight'> || <'font-stretch'> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'> ] | caption | icon | menu | message-box | small-caption | status-bar */
+    color: black;
+    font-family: var(--fonte_padrao);
+    min-width: 400px;
+}
+
+/* MAIN */
+main
+{
+    margin: auto;
+    margin-top:0;
+    margin-bottom: 25px;
+    min-width: 400px;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 5px 10px;
+    box-shadow: 0px 8px 12px 2px rgb(0 0 0 / 50%);
+    border-radius: 5px;
+    text-align: justify;
+}
+main article
+{
+    padding: 10px 20px;
+
+}
+main img
+{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+main img.pequena
+{
+    min-width: 100px;
+    max-width: 300px;
+}
+main p
+{
+    line-height: 2em;
+    font-size: 1em;
+    text-indent: 3em;
+    margin: 20px;
+}
+main a:hover
+{
+    text-decoration: underline solid 2px;
+}
+a
+{
+    text-decoration: none;
+}
+p>a::after
+{
+    content: " 🔗";    
+}
+
+/* HEADER */
+header
+{
+    padding: 10px 20px;
+    padding-top: 30px;
+    margin: 0;
+    /* background-image: linear-gradient(to bottom, #2fa866 15%, #063D1e 85%); */
+    background-image: linear-gradient(to bottom, var(--cor_media), var(--cor_mais_forte) );
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 12px 2px rgb(0 0 0 / 50%);
+    text-align: center;
+    min-width: 380px;
+}
+header > p
+{
+    font-size:larger;
+    text-indent: 0;
+    padding-bottom: 30px;
+    text-shadow: 3px 3px 4px #00000082;
+}
+header > h1
+{
+    color: #fff;
+    font-family: var(--fonte_destaque);
+    font-weight: lighter;
+    font-size: xxx-large;
+    text-shadow: 3px 3px 4px #00000082;
+}
+
+/* NAV BAR */
+nav
+{
+    background-color: var(--cor_mais_forte);
+    padding: 10px;
+    box-shadow: -1px 7px 9px  rgba(0, 0, 0, 0.438);
+    min-width: 400px;
+}
+
+nav > a:hover
+{
+    background-color: var(--cor_muito_leve);
+    color: var(--cor_mais_forte);
+    border-radius: 16px;
+}
+nav > a
+{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    
+    padding: 10px; 
+    margin-bottom: 5px;
+    
+    transition-duration: 175ms;
+    
+}
+h1, h2
+{
+    font-family: var(--fonte_android);
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+    color: #063D1E;
+    font-weight: normal;
+    text-align: center;
+}
+h2 
+{
+    padding: 5px;
+    margin-top: 15px ;
+    margin-bottom: 15px ;
+    background-image: linear-gradient(to right,rgba(131, 225, 173, 0.725) 20%, white );
+    text-indent: 1em;
+}
+
+.destaque, a
+{
+    font-weight: bold;
+    color: #063D1E;
+}
+
+/* ASIDE */
+aside
+{
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #C5EBD6;
+    padding: 15px;
+}
+/* aside > p
+{
+} */
+aside > h3
+{
+    background-color: var(--cor_leve);
+    border-radius: 10px 10px 0 0 ;
+    padding: 10px;
+    margin: -15px -15px 0 -15px ;
+    color: #fff;
+}
+aside ul
+{
+    list-style-type: '\2714\00a0';
+    list-style-position: inside;
+    columns: 2;
+    padding: 20px;
+}
+/* iframe
+{
+    background-color: #063D1e;
+    padding: 10px;
+    } */
+
+div.video > iframe
+{
+    position: absolute;
+    top: 3.5%;
+    left: 4.8%;
+    height: 92.7%;
+    width: 90.1%;
+}
+div.video
+{
+    position:relative;
+    background-color: var(--cor_mais_forte);
+    height: 0;
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-bottom: 15px;
+    padding-bottom: 59%;
+}
+
+
+
+footer
+{
+    background-color: var(--cor_mais_forte);
+    text-align: center;
+    color: white;
+    font-size: smaller;
+    padding: 10px;
+    margin-top: 10px;
+    min-width: 400px;
+}
+footer a:hover
+{
+    background-color: var(--cor_muito_leve);
+    color: var(--cor_mais_forte);
+    border-radius: 10px;
+    padding: 4px;
+}
+footer a
+
+{
+    text-decoration: none;
+    color: inherit;
+    transition-duration: 175ms;
+}
